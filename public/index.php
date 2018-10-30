@@ -1,7 +1,17 @@
 <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     require_once '../app/init.php';
 
     $app = new App;
+    $user = DB::getInstance()->query("SELECT username FROM users WHERE username = ?", array('kuda'));
+
+    if ($user->error()) {
+      echo 'No User';
+    } else {
+      echo 'OK';
+    }
 ?>
 <!doctype html>
 <html lang="en">
