@@ -5,13 +5,17 @@
     require_once '../app/init.php';
 
     $app = new App;
-    $user = DB::getInstance()->query("SELECT username FROM users WHERE username = ?", array('kuda'));
+    // $user = DB::getInstance()->get('users', array('username', '=', 'bryce'));
+    $userInsert = DB::getInstance()->update('users', 4, array(
+      'username' => 'updated'
+    ));
 
-    if ($user->error()) {
-      echo 'No User';
-    } else {
-      echo 'OK';
-    }
+    
+    // if (!$user->count()) {
+    //   echo 'No User';
+    // } else {
+    //   echo $user->first()->username;
+    // }
 ?>
 <!doctype html>
 <html lang="en">
