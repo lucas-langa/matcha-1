@@ -6,7 +6,6 @@ class Home extends Controller
     {
         $user = $this->model('User');
         $user->name = $name;
-        $user->getid();
         
         $this->view('dashboard/index', ['name' => $user->name]);
     }

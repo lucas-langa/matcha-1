@@ -79,7 +79,7 @@
                 <input type="password" class="form-control" name="pwd" id="password" placeholder="Password">
               </div>
               <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" name="remeber_me" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">remember me</label>
               </div>
               <button type="submit" class="btn btn-primary">Login</button>
